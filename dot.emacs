@@ -1,7 +1,7 @@
 (setq load-path
       (append
        (list
-       (expand-file-name "~/lisp/")
+       (expand-file-name "~/elisp/")
        )
        load-path))
 
@@ -108,7 +108,7 @@
 (setq load-path
       (append
        (list
-       (expand-file-name "~/lisp/")
+       (expand-file-name "~/elisp/")
        )
        load-path))
 
