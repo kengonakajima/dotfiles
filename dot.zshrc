@@ -74,10 +74,10 @@ bindkey "^N" history-beginning-search-forward-end
 alias ls="ls -G"
 alias e='emacs -nw'
 
-if [ "$UNAME" = "Darwin" ]
+if [ `uname` = "Darwin" ]
 then
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-    alias e='/Applications/Emacs.app/Contents/MacOS/Emacs'
+#    alias e='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
 	
 alias l='ls -l -G'
