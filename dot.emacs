@@ -72,7 +72,7 @@
 (setq auto-mode-alist (append '(("\\.go$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.as"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.js"  . c-mode))auto-mode-alist))
-(setq auto-mode-alist (append '(("\\.cpp$"  . c-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.cpp$"  . c++-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.lvm$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.nut$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.rdl$"  . ruby-mode))auto-mode-alist))
@@ -156,6 +156,11 @@
 (setq undo-limit 100000)
 (setq undo-strong-limit 130000)
 
+
+
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 
 
