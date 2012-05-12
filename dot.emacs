@@ -156,15 +156,16 @@
 (setq undo-limit 100000)
 (setq undo-strong-limit 130000)
 
+(add-hook 'lua-mode-hook 
+          (lambda () (unless (fboundp 'lua-calculate-indentation-right-shift-next)
+                       (load-file (locate-file "my-lua.el" load-path)))))
 
+
+                       
 
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 
-
-(add-hook 'lua-mode-hook 
-          (lambda () (unless (fboundp 'lua-calculate-indentation-right-shift-next)
-                       (load-file (locate-file "my-lua.el" load-path)))))
 
