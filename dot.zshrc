@@ -111,7 +111,7 @@ alias gaddship='git add *.lua ../sv/*.lua ../*.lua ../.journalizer.log'
 
 alias zsrc='source ~/.zshrc'
 
-
+alias rc='redis-cli'
 
 
 # local hidden settings
