@@ -71,12 +71,16 @@
 (setq auto-mode-alist (append '(("\\.cs$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.go$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.as"  . c-mode))auto-mode-alist))
-(setq auto-mode-alist (append '(("\\.js"  . c-mode))auto-mode-alist))
+
 (setq auto-mode-alist (append '(("\\.cpp$"  . c++-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.lvm$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.nut$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.rdl$"  . ruby-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.coffee$"  . coffee-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.tmpl$"  . html-mode))auto-mode-alist))
+
+(setq auto-mode-alist (append '(("\\.js$"  . js2-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.json$"  . js2-mode))auto-mode-alist))
 
 
 
@@ -169,3 +173,23 @@
 
 
 
+(setq-default c-basic-offset 4)
+
+(when (load "js2" t)
+  (setq js2-cleanup-whitespace nil
+        js2-mirror-mode nil
+        js2-bounce-indent-flag nil)
+
+  (defun indent-and-back-to-indentation ()
+    (interactive)
+    (indent-for-tab-command)
+    (let ((point-of-indentation
+           (save-excursion
+             (back-to-indentation)
+             (point))))
+      (skip-chars-forward "\s " point-of-indentation)))
+  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
+
+  (define-key js2-mode-map "\C-m" nil)
+
+  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
