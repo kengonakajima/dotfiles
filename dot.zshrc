@@ -80,9 +80,9 @@ then
 #    alias e='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
 	
-alias l='ls -l -G'
-alias ll='ls -l -G'
-alias ls='ls -G'
+alias l='ls -l -G --color=auto'
+alias ll='ls -l -G --color=auto'
+alias ls='ls -G --color=auto'
 alias mk='make'
 alias flp='open -a /Applications/Adobe\ Flex\ Builder\ 3/Player/mac/Flash\ Player.app'
 alias tailfl='tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
