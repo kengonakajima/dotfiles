@@ -132,6 +132,7 @@
      (global-set-key "\C-cb" 'org-iswitchb)
      (global-set-key "\C-ci" 'dabbrev-expand)
 
+     (global-set-key "\M-[Z" 'org-global-cycle)
      (setq org-log-done 'time)
      (setq org-log-done 'note)
 
