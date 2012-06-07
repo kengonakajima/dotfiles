@@ -92,18 +92,22 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "#233" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
+
+(if (string="root" (getenv "USER") )
+    (custom-set-faces
+     '(default ((t (:stipple nil :background "Black" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
+    (custom-set-faces
+     '(default ((t (:stipple nil :background "#233" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
+  )
+
 (if window-system (progn
-   (setq initial-frame-alist '((width . 150) (height . 62)))
-   (set-background-color "Black")
-   (set-foreground-color "LightGray")
-   (set-cursor-color "Gray")
- ))
+                    (setq initial-frame-alist '((width . 150) (height . 62)))
+                    (set-background-color "Black")
+                    (set-foreground-color "LightGray")
+                    (set-cursor-color "Gray")
+                    ))
+  
+                       
 
 ;; i dont need backup
 (setq make-backup-files nil)
