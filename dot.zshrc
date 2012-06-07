@@ -101,15 +101,14 @@ alias m='moai main.lua'
 
 alias gcmt='git commit -m'
 alias gst='git status'
+alias gs='git status'
 alias gpu='git push'
 alias gpl='git pull'
 alias gp='git pull'
 alias gd='git diff'
 alias gmv='git mv'
 alias gadd='git add'
-alias gsrc='git add *.lua *.h *.cpp'
-alias glua='git add *.lua'
-alias gaddship='git add *.lua ../sv/*.lua ../*.lua ../.journalizer.log'
+alias gad='git add'
 
 alias zsrc='source ~/.zshrc'
 
