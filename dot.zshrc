@@ -100,6 +100,7 @@ alias m='moai main.lua'
 
 
 alias gcmt='git commit -m'
+alias gcm='git commit -m'
 alias gst='git status'
 alias gs='git status'
 alias gpu='git push'
@@ -114,8 +115,8 @@ alias zsrc='source ~/.zshrc'
 
 alias rc='redis-cli'
 
+alias my='mysql'
 
 # local hidden settings
 . ~/.zshrc_local
-
 
