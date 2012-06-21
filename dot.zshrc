@@ -118,12 +118,16 @@ alias gd='git diff'
 alias gmv='git mv'
 alias gadd='git add'
 alias gad='git add'
+alias gsur='git submodule update --init --recursive'
+
 
 alias zsrc='source ~/.zshrc'
 
 alias rc='redis-cli'
 
 alias my='mysql'
+
+alias nave='~/.nave/nave.sh'
 
 # local hidden settings
 . ~/.zshrc_local
