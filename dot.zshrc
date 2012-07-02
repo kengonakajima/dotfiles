@@ -72,6 +72,8 @@ bindkey "^N" history-beginning-search-forward-end
 # command aliases
 
 alias ls="ls -G"
+alias ll='ls -l -G'
+alias ls='ls -G'
 alias e='emacs -nw'
 
 if [ `uname` = "Darwin" ]
@@ -87,9 +89,8 @@ alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'	
 fi
 
-alias l='ls -l -G'
-alias ll='ls -l -G'
-alias ls='ls -G'
+
+
 
 alias mk='make'
 alias flp='open -a /Applications/Adobe\ Flex\ Builder\ 3/Player/mac/Flash\ Player.app'
