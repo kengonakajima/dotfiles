@@ -97,7 +97,7 @@
     (custom-set-faces
      '(default ((t (:stipple nil :background "Black" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
     (custom-set-faces
-     '(default ((t (:stipple nil :background "#233" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
+     '(default ((t (:stipple nil :background "#122" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :family "apple-monaco")))))
   )
 
 (if window-system (progn
