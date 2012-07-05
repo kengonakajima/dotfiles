@@ -193,8 +193,10 @@
              (back-to-indentation)
              (point))))
       (skip-chars-forward "\s " point-of-indentation)))
-  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
+;;  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
 
   (define-key js2-mode-map "\C-m" nil)
 
   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
+
+
