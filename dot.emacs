@@ -180,23 +180,44 @@
 
 (setq-default c-basic-offset 4)
 
-(when (load "js2" t)
-  (setq js2-cleanup-whitespace nil
-        js2-mirror-mode nil
-        js2-bounce-indent-flag nil)
+;; (when (load "js2" t)
+;;   (setq js2-cleanup-whitespace nil
+;;         js2-mirror-mode nil
+;;         js2-bounce-indent-flag nil)
 
-  (defun indent-and-back-to-indentation ()
-    (interactive)
-    (indent-for-tab-command)
-    (let ((point-of-indentation
-           (save-excursion
-             (back-to-indentation)
-             (point))))
-      (skip-chars-forward "\s " point-of-indentation)))
-;;  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
+;;   (defun indent-and-back-to-indentation ()
+;;     (interactive)
+;;     (indent-for-tab-command)
+;;     (let ((point-of-indentation
+;;            (save-excursion
+;;              (back-to-indentation)
+;;              (point))))
+;;       (skip-chars-forward "\s " point-of-indentation)))
+;; ;;  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
 
-  (define-key js2-mode-map "\C-m" nil)
+;;   (define-key js2-mode-map "\C-m" nil)
 
-  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
+;;   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
 
 
+(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
+(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+
+(autoload 'js2-mode "js2" nil t)
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (require 'espresso)
+              (setq espresso-indent-level 2
+                    espresso-expr-indent-offset 2
+                    indent-tabs-mode nil)
+              (set (make-local-variable 'indent-line-function) 'espresso-indent-line)))
+
+                                                                                            
+;;(add-hook 'js2-mode-hook
+;;          #'(lambda ()
+;;              (require 'js)
+;;              (setq js-indent-level 4
+;;                    js-expr-indent-offset 4
+;;                    indent-tabs-mode nil)
+;;              (set (make-local-variable 'indent-line-function) 'js-indent-line)))
