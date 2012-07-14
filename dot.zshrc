@@ -73,6 +73,7 @@ bindkey "^N" history-beginning-search-forward-end
 
 alias ls="ls -G"
 alias ll='ls -l -G'
+alias l='ls -l -G'
 alias ls='ls -G'
 alias e='emacs -nw'
 
