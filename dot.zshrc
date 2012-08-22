@@ -105,8 +105,8 @@ alias mkcmk='make clean;make'
 alias mksq='make clean;make source; make depend;make -j 4'
 
 alias m3='moai3d'
-alias mm='moai main.lua'
-alias m='moai main.lua'
+alias mm='moai main.lua &'
+alias m='moai main.lua &'
 
 
 alias gcmt='git commit -m'
