@@ -73,6 +73,7 @@
 (setq auto-mode-alist (append '(("\\.as"  . c-mode))auto-mode-alist))
 
 (setq auto-mode-alist (append '(("\\.cpp$"  . c++-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.ispc$"  . c++-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.lvm$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.nut$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.rdl$"  . ruby-mode))auto-mode-alist))
@@ -87,10 +88,10 @@
 
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 (if (string="root" (getenv "USER") )
@@ -107,7 +108,8 @@
                     (set-cursor-color "Gray")
                     ))
   
-                       
+
+
 
 ;; i dont need backup
 (setq make-backup-files nil)
@@ -221,3 +223,34 @@
 ;;                    js-expr-indent-offset 4
 ;;                    indent-tabs-mode nil)
 ;;              (set (make-local-variable 'indent-line-function) 'js-indent-line)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "Black" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "apple" :family "Monaco")))))
+
+(when (>= emacs-major-version 23)
+ (set-face-attribute 'default nil
+                     :family "monaco"
+                     :height 140)
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0208
+  '("Hiragino Kaku Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0212
+  '("Hiragino Kaku Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'mule-unicode-0100-24ff
+  '("monaco" . "iso10646-1"))
+ (setq face-font-rescale-alist
+      '(("^-apple-hiragino.*" . 1.2)
+        (".*osaka-bold.*" . 1.2)
+        (".*osaka-medium.*" . 1.2)
+        (".*courier-bold-.*-mac-roman" . 1.0)
+        (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+        (".*monaco-bold-.*-mac-roman" . 0.9)
+        ("-cdac$" . 1.3))))
