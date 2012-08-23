@@ -167,18 +167,25 @@
 (setq undo-limit 100000)
 (setq undo-strong-limit 130000)
 
-;;(add-hook 'lua-mode-hook 
-;;          (lambda () (unless (fboundp 'lua-calculate-indentation-right-shift-next)
-;;                       (load-file (locate-file "my-lua.el" load-path)))))
 
 
-                       
+
+
 (add-to-list 'load-path "~/elisp")
+
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 (setq lua-indent-level 2)
+
+;;(add-hook 'lua-mode-hook 
+;;          (lambda () (unless (fboundp 'lua-calculate-indentation-right-shift-next)
+;;                       (load-file (locate-file "my-lua.el" load-path)))))
+
+
+
+
 
 
 (setq-default c-basic-offset 4)
@@ -255,3 +262,6 @@
         (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
         (".*monaco-bold-.*-mac-roman" . 0.9)
         ("-cdac$" . 1.3))))
+
+
+(define-key global-map [?¥] [?\\])  ;; for mac backslash
