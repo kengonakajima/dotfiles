@@ -79,7 +79,7 @@ alias e='emacs -nw'
 
 if [ `uname` = "Darwin" ]
 then
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+#    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 #    alias e='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
 
@@ -120,7 +120,7 @@ alias gd='git diff'
 alias gmv='git mv'
 alias gadd='git add'
 alias gad='git add'
-alias gsur='git submodule update --init --recursive'
+alias gsur='git submodule update --init --recursive; git submodule foreach --recursive "git checkout master" '
 alias gsubmaster='git submodule foreach --recursive "git checkout master" '
 
 

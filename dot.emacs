@@ -187,7 +187,6 @@
 
 
 
-
 (setq-default c-basic-offset 4)
 
 ;; (when (load "js2" t)
