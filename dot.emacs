@@ -262,7 +262,6 @@
         (".*monaco-bold-.*-mac-roman" . 0.9)
         ("-cdac$" . 1.3))))
 
-
 (define-key global-map [?¥] [?\\])  ;; for mac backslash
 
 
@@ -273,6 +272,14 @@
   (if (eolp) (let (parens-require-spaces) (insert-pair)) 
     (self-insert-command 1)))
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (define-key c-mode-map "\"" 'electric-pair)
+            (define-key c-mode-map "\'" 'electric-pair)
+            (define-key c-mode-map "(" 'electric-pair)
+            (define-key c-mode-map "[" 'electric-pair)
+            (define-key c-mode-map "{" 'electric-pair)))    
+
 (add-hook 'lua-mode-hook
           (lambda ()
             (define-key lua-mode-map "\"" 'electric-pair)
@@ -280,3 +287,6 @@
             (define-key lua-mode-map "(" 'electric-pair)
             (define-key lua-mode-map "[" 'electric-pair)
             (define-key lua-mode-map "{" 'electric-pair)))    
+
+(if (boundp 'electric-pair-mode)
+ (electric-pair-mode))
