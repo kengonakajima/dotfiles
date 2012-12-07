@@ -15,7 +15,7 @@ export NACL_SDK_ROOT=/Users/ringo/nacl_sdk
 export LANG=ja_JP.UTF-8           
 export EDITOR=emacs
 export SVN_EDITOR=emacs
-export PATH=/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin:/Users/ringo/flex_sdk_4_1/bin:/Users/ringo/bin
+export PATH=/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin
 export LUA_PATH="/usr/local/share/lua/5.1//?.lua;/usr/local/lib/luarocks/?.lua;;"
 
 
@@ -136,3 +136,4 @@ alias nave='~/.nave/nave.sh'
 # local hidden settings
 . ~/.zshrc_local
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

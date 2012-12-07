@@ -63,7 +63,7 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 
 
-(setq auto-mode-alist (append '(("\\.h$"  . c-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.h$"  . c++-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.c$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.cu$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.m$"  . c-mode))auto-mode-alist))
@@ -77,6 +77,7 @@
 (setq auto-mode-alist (append '(("\\.lvm$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.nut$"  . c-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.rdl$"  . ruby-mode))auto-mode-alist))
+
 (setq auto-mode-alist (append '(("\\.coffee$"  . coffee-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.tmpl$"  . html-mode))auto-mode-alist))
 
