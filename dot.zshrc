@@ -133,7 +133,9 @@ alias my='mysql'
 
 alias nave='~/.nave/nave.sh'
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # local hidden settings
 . ~/.zshrc_local
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
