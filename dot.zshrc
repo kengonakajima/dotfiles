@@ -15,8 +15,9 @@ export NACL_SDK_ROOT=/Users/ringo/nacl_sdk
 export LANG=ja_JP.UTF-8           
 export EDITOR=emacs
 export SVN_EDITOR=emacs
-export PATH=/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin
+export PATH=/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin:/Users/ringo/Dropbox/sdks/AIRSDK_Compiler3.6/bin
 export LUA_PATH="/usr/local/share/lua/5.1//?.lua;/usr/local/lib/luarocks/?.lua;;"
+
 
 
 
@@ -123,6 +124,7 @@ alias gad='git add'
 alias gsur='git submodule update --init --recursive; git submodule foreach --recursive "git checkout master" '
 alias gsubmaster='git submodule foreach --recursive "git checkout master" '
 
+alias tailf='tail -f /Users/ringo/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
 
 
 alias zsrc='source ~/.zshrc'
@@ -132,6 +134,7 @@ alias rc='redis-cli'
 alias my='mysql'
 
 alias nave='~/.nave/nave.sh'
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
