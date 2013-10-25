@@ -21,10 +21,6 @@ export LUA_PATH="/usr/local/share/lua/5.1//?.lua;/usr/local/lib/luarocks/?.lua;;
 
 
 
-. ~/bin/z.sh
-function precmd () {
-  _z --add "$(pwd -P)"
-}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
