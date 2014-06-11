@@ -242,7 +242,7 @@
 (when (>= emacs-major-version 23)
  (set-face-attribute 'default nil
                      :family "monaco"
-                     :height 140)
+                     :height 100)
  (set-fontset-font
   (frame-parameter nil 'font)
   'japanese-jisx0208
@@ -292,3 +292,8 @@
 
 (if (boundp 'electric-pair-mode)
  (electric-pair-mode))
+
+
+
+
+
