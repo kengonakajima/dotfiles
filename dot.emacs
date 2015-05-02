@@ -239,6 +239,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "Black" :foreground "LightGray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "apple" :family "Monaco")))))
 
+(if (display-graphic-p)
 (when (>= emacs-major-version 23)
  (set-face-attribute 'default nil
                      :family "monaco"
@@ -262,7 +263,7 @@
         (".*courier-bold-.*-mac-roman" . 1.0)
         (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
         (".*monaco-bold-.*-mac-roman" . 0.9)
-        ("-cdac$" . 1.3))))
+        ("-cdac$" . 1.3))))     )
 
 (define-key global-map [?¥] [?\\])  ;; for mac backslash
 
