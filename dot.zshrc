@@ -131,6 +131,7 @@ alias my='mysql'
 
 alias nave='~/.nave/nave.sh'
 
+alias ehttp='ruby -run -ehttpd . -p8000'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
