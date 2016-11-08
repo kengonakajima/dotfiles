@@ -119,9 +119,12 @@ alias gadd='git add'
 alias gad='git add'
 alias gsur='git submodule update --init --recursive; git submodule foreach --recursive "git checkout master" '
 alias gsubmaster='git submodule foreach --recursive "git checkout master" '
-
+alias gcp='git cherry-pick'
+alias gco='git checkout'
 alias tailf='tail -f /Users/ringo/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
+alias gours='git checkout --ours'
 
+alias ip='curl "https://api.ipify.org?format=json"'
 
 alias zsrc='source ~/.zshrc'
 
@@ -139,3 +142,15 @@ alias ehttp='ruby -run -ehttpd . -p8000'
 . ~/.zshrc_local
 
 
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/ringo/Documents/cocos2d-x-3.13/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT=/Users/ringo/Documents
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT=/Users/ringo/Documents/cocos2d-x-3.13/templates
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
