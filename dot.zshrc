@@ -136,6 +136,8 @@ alias nave='~/.nave/nave.sh'
 
 alias ehttp='ruby -run -ehttpd . -p8000'
 
+alias phps8888='php -S 0.0.0.0:8888'
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # local hidden settings
