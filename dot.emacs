@@ -171,6 +171,8 @@
 
 
 
+(setq markdown-command "multimarkdown")
+(global-set-key "\C-c\C-c\C-p" 'markdown-command)
 
 
 (add-to-list 'load-path "~/elisp")
@@ -293,6 +295,7 @@
 
 (if (boundp 'electric-pair-mode)
  (electric-pair-mode))
+
 
 
 

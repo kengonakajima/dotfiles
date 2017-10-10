@@ -15,7 +15,7 @@ export NACL_SDK_ROOT=/Users/ringo/nacl_sdk
 export LANG=ja_JP.UTF-8           
 export EDITOR=emacs
 export SVN_EDITOR=emacs
-export PATH=/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin:/Users/ringo/Dropbox/sdks/AIRSDK_Compiler3.6/bin
+export PATH=/usr/local/opt/openssl/bin:/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin
 export LUA_PATH="/usr/local/share/lua/5.1//?.lua;/usr/local/lib/luarocks/?.lua;;"
 
 
@@ -91,19 +91,12 @@ fi
 
 
 alias mk='make'
-alias flp='open -a /Applications/Adobe\ Flex\ Builder\ 3/Player/mac/Flash\ Player.app'
-alias tailfl='tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
-alias tailflp='tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/policyfiles.txt'
 
-alias svnstat='svn stat |grep -v \?'
+
 
 alias mkd='make clean;make depend'
 alias mkcmk='make clean;make'
 alias mksq='make clean;make source; make depend;make -j 4'
-
-alias m3='moai3d'
-alias mm='moai main.lua &'
-alias m='moai main.lua &'
 
 
 alias gcmt='git commit -m'
@@ -121,9 +114,8 @@ alias gsur='git submodule update --init --recursive; git submodule foreach --rec
 alias gsubmaster='git submodule foreach --recursive "git checkout master" '
 alias gcp='git cherry-pick'
 alias gco='git checkout'
-alias tailf='tail -f /Users/ringo/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
 alias gours='git checkout --ours'
-
+alias mylocal='mysql -u root -h 127.0.0.1 test'
 alias ip='curl "https://api.ipify.org?format=json"'
 
 alias zsrc='source ~/.zshrc'
@@ -136,7 +128,12 @@ alias nave='~/.nave/nave.sh'
 
 alias ehttp='ruby -run -ehttpd . -p8000'
 
+
 alias phps8888='php -S 0.0.0.0:8888'
+
+alias pyhttp='python -m SimpleHTTPServer'
+alias pyjson='python -m json.tool'
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -156,3 +153,8 @@ export PATH=$COCOS_X_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/ringo/Documents/cocos2d-x-3.13/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+TMOUT=999999
+
+alias myip="dig o-o.myaddr.l.google.com txt @ns1.google.com +short"
+
