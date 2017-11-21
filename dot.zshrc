@@ -128,8 +128,12 @@ alias nave='~/.nave/nave.sh'
 
 alias ehttp='ruby -run -ehttpd . -p8000'
 
+
+alias phps8888='php -S 0.0.0.0:8888'
+
 alias pyhttp='python -m SimpleHTTPServer'
 alias pyjson='python -m json.tool'
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
