@@ -116,7 +116,7 @@ alias gcp='git cherry-pick'
 alias gco='git checkout'
 alias gours='git checkout --ours'
 alias mylocal='mysql -u root -h 127.0.0.1 test'
-alias ip='curl "https://api.ipify.org?format=json"'
+alias ipi='curl "https://api.ipify.org?format=json"'
 
 alias zsrc='source ~/.zshrc'
 
