@@ -6,6 +6,8 @@
        load-path))
 
 
+
+
 (defun my-scroll-up () ""
   (interactive)
   (condition-case ()
@@ -40,6 +42,9 @@
 (global-set-key "\C-v" 'my-scroll-up)
 (global-set-key "\C-z" 'my-scroll-down)
 (global-set-key "\C-xf" 'mas-list-file-history)
+
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 
 ;;
 ;; C mode config
@@ -123,6 +128,8 @@
        (expand-file-name "~/elisp/")
        )
        load-path))
+
+
 
 
 (setq mas-file-history-emacs-start-autoload-registered-files t)
@@ -309,7 +316,4 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (set-exec-path-from-shell-PATH)
-
-;;(require 'php-mode) hangする
-
 
