@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq load-path
       (append
        (list
@@ -41,7 +48,7 @@
 (global-set-key "\C-m"     'newline-and-indent)
 (global-set-key "\C-v" 'my-scroll-up)
 (global-set-key "\C-z" 'my-scroll-down)
-(global-set-key "\C-xf" 'mas-list-file-history)
+(global-set-key "\C-xf" 'recentf-open-files)
 
 (require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
@@ -132,11 +139,11 @@
 
 
 
-(setq mas-file-history-emacs-start-autoload-registered-files t)
-(load-library "mas-file-history")
+
 
 (require 'syntax)
 (require 'go-mode-load)
+
 
 ;; for org
 ;; The following lines are always needed.  Choose your own keys.
@@ -152,6 +159,18 @@
      (setq org-log-done 'note)
 
 
+(when (require 'recentf nil t)
+  (setq recentf-max-saved-items 2000)
+  (setq recentf-exclude '(".recentf"))
+  (setq recentf-auto-cleanup 10)
+  (setq recentf-auto-save-timer
+        (run-with-idle-timer 30 t 'recentf-save-list))
+  (recentf-mode 1))
+
+
+(setq-default save-place t)
+(require 'saveplace)
+(save-place-mode 1)
 
 (defun xcode:buildandrun ()
  (interactive)
@@ -316,4 +335,5 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (set-exec-path-from-shell-PATH)
+
 
