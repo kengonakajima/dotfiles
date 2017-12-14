@@ -310,6 +310,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 (set-exec-path-from-shell-PATH)
 
-(require 'php-mode)
+;;(require 'php-mode) hangする
 
 
