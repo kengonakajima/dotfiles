@@ -169,8 +169,12 @@
 
 
 (setq-default save-place t)
-(require 'saveplace)
-(save-place-mode 1)
+;;; enable saveplace
+(if (and (>= emacs-major-version 25) (>= emacs-minor-version 1))
+        (progn (require 'saveplace) (save-place-mode 1))
+    )
+    
+
 
 (defun xcode:buildandrun ()
  (interactive)
