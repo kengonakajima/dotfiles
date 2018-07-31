@@ -116,7 +116,7 @@
   )
 
 (if window-system (progn
-                    (setq initial-frame-alist '((width . 150) (height . 60)))
+                    (setq initial-frame-alist '((width . 120) (height . 60)))
                     (set-background-color "Black")
                     (set-foreground-color "LightGray")
                     (set-cursor-color "Gray")
@@ -275,7 +275,7 @@
 (when (>= emacs-major-version 23)
  (set-face-attribute 'default nil
                      :family "monaco"
-                     :height 100)
+                     :height 110)
  (set-fontset-font
   (frame-parameter nil 'font)
   'japanese-jisx0208
