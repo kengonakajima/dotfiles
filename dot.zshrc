@@ -76,8 +76,8 @@ alias e='emacs -nw'
 
 if [ `uname` = "Darwin" ]
 then
-#    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-#    alias e='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias e='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 fi
 
 if [ `uname` = "Linux" ]
@@ -142,17 +142,7 @@ alias pyjson='python -m json.tool'
 
 
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/ringo/Documents/cocos2d-x-3.13/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/ringo/Documents
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/ringo/Documents/cocos2d-x-3.13/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 TMOUT=999999
 
