@@ -13,8 +13,7 @@ bindkey -e                        # emacs like
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 export NACL_SDK_ROOT=/Users/ringo/nacl_sdk
 export LANG=ja_JP.UTF-8           
-export EDITOR=emacs
-export SVN_EDITOR=emacs
+export EDITOR=vi
 export PATH=/usr/local/opt/openssl/bin:/usr/local/bin:$PATH:/bin:/usr/bin:/Users/ringo/bin:/Users/ringo/.cargo/bin
 export LUA_PATH="/usr/local/share/lua/5.1//?.lua;/usr/local/lib/luarocks/?.lua;;"
 
