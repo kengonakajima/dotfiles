@@ -1,5 +1,7 @@
 # PROMPT
 
+
+
 PS1="[@${HOST%%.*} %1~]%(!.#.$) " 
 
 RPROMPT="%T"                      # time at right
@@ -67,10 +69,12 @@ bindkey "^N" history-beginning-search-forward-end
 
 # command aliases
 
-alias ls="ls -G"
-alias ll='ls -l -G'
-alias l='ls -l -G'
-alias ls='ls -G'
+alias ls="ls -G -h"
+alias ll='ls -l -G -h'
+alias l='ls -l -G -h'
+
+alias df='df -h'
+
 alias e='emacs -nw'
 
 if [ `uname` = "Darwin" ]
