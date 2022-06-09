@@ -96,9 +96,9 @@
 (setq auto-mode-alist (append '(("\\.coffee$"  . coffee-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.tmpl$"  . html-mode))auto-mode-alist))
 
-(setq auto-mode-alist (append '(("\\.js$"  . js2-mode))auto-mode-alist))
-(setq auto-mode-alist (append '(("\\.jsx$"  . js2-mode))auto-mode-alist))
-(setq auto-mode-alist (append '(("\\.json$"  . js2-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.js$"  . js-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.jsx$"  . js-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.json$"  . js-mode))auto-mode-alist))
 
 
 
@@ -226,47 +226,9 @@
 
 (setq-default c-basic-offset 4)
 
-;; (when (load "js2" t)
-;;   (setq js2-cleanup-whitespace nil
-;;         js2-mirror-mode nil
-;;         js2-bounce-indent-flag nil)
-
-;;   (defun indent-and-back-to-indentation ()
-;;     (interactive)
-;;     (indent-for-tab-command)
-;;     (let ((point-of-indentation
-;;            (save-excursion
-;;              (back-to-indentation)
-;;              (point))))
-;;       (skip-chars-forward "\s " point-of-indentation)))
-;; ;;  (define-key js2-mode-map "\C-i" 'indent-and-back-to-indentation)
-
-;;   (define-key js2-mode-map "\C-m" nil)
-
-;;   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
 
 
-(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 
-(autoload 'js2-mode "js2" nil t)
-(add-hook 'js2-mode-hook
-          #'(lambda ()
-              (require 'espresso)
-              (setq espresso-indent-level 2
-                    espresso-expr-indent-offset 2
-                    indent-tabs-mode nil)
-              (set (make-local-variable 'indent-line-function) 'espresso-indent-line)))
-
-                                                                                            
-;;(add-hook 'js2-mode-hook
-;;          #'(lambda ()
-;;              (require 'js)
-;;              (setq js-indent-level 4
-;;                    js-expr-indent-offset 4
-;;                    indent-tabs-mode nil)
-;;              (set (make-local-variable 'indent-line-function) 'js-indent-line)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -344,3 +306,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (set-exec-path-from-shell-PATH)
 
 
+
+(add-hook 'js-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))
