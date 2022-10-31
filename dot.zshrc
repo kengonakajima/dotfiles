@@ -102,6 +102,7 @@ alias mkcmk='make clean;make'
 alias mksq='make clean;make source; make depend;make -j 4'
 
 
+alias gl='git log'
 alias gcmt='git commit -m'
 alias gcm='git commit -m'
 alias gst='git status'
