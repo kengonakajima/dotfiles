@@ -152,3 +152,19 @@ TMOUT=999999
 
 alias myip="dig o-o.myaddr.l.google.com txt @ns1.google.com +short"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2024-12-25 01:31:11
+export PATH="$PATH:/Users/ringo/.local/bin"
+
+# Added by Windsurf
+export PATH="/Users/ringo/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ringo/.lmstudio/bin"
+
+# Added by Windsurf - Next
+export PATH="/Users/ringo/.codeium/windsurf/bin:$PATH"
