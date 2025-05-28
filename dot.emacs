@@ -50,8 +50,8 @@
 (global-set-key "\C-z" 'my-scroll-down)
 (global-set-key "\C-xf" 'recentf-open-files)
 
-(require 'php-mode)
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(when (require 'php-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.php$" . php-mode)))
 
 (require 'typescript-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
@@ -96,6 +96,8 @@
 (setq auto-mode-alist (append '(("\\.coffee$"  . coffee-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.tmpl$"  . html-mode))auto-mode-alist))
 
+(setq auto-mode-alist (append '(("\\.mjs$"  . js-mode))auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.jslib$"  . js-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.js$"  . js-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.jsx$"  . js-mode))auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.json$"  . js-mode))auto-mode-alist))
