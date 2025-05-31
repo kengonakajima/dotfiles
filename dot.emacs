@@ -173,11 +173,12 @@
   (recentf-mode 1))
 
 
-(setq-default save-place t)
 ;;; enable saveplace
-(if (and (>= emacs-major-version 25) (>= emacs-minor-version 1))
-        (progn (require 'saveplace) (save-place-mode 1))
-    )
+(if (>= emacs-major-version 25)
+    (save-place-mode 1)
+  (progn 
+    (require 'saveplace)
+    (setq-default save-place t)))
     
 
 
